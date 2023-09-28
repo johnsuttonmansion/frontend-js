@@ -1,4 +1,4 @@
-// ======> Initial / Default values
+// ======> Initial / Default values from Global
 let initialOfferingValue = 'initialOfferingValue' in window ? window.initialOfferingValue : undefined,
     annualAppreciation = 'annualAppreciation' in window ? window.annualAppreciation : undefined,
     annualCashFlowPct = 'annualCashFlowPct' in window ? window.annualCashFlowPct : undefined,
