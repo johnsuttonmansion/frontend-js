@@ -1,40 +1,15 @@
-// This script checks if the specified global variables exist and logs their values or a message indicating they are not defined.
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    const variablesToCheck = [
-        'initialOfferingValue',
-        'annualAppreciation',
-        'annualCashFlowPct',
-        'initialInvestment',
-        'holdingPeriod',
-        'annualCashFlowIncrease',
-        'dispositionExpensePct',
-        'initialHomeValue',
-        'furnishingValue',
-        'cashReserves'
-    ];
-
-    variablesToCheck.forEach(variableName => {
-        if (variableName in window) {
-            console.log(`${variableName}:`, window[variableName]);
-        } else {
-            console.log(`${variableName} is not defined`);
-        }
-    });
-});
-
-
 // ======> Initial / Default values
-let initialOfferingValue = window.initialOfferingValue,
-  annualAppreciation = window.annualAppreciation,
-  annualCashFlowPct = window.annualCashFlowPct,
-  initialInvestment = window.initialInvestment,
-  holdingPeriod = window.holdingPeriod,
-  annualCashFlowIncrease = window.annualCashFlowIncrease,
-  dispositionExpensePct = window.dispositionExpensePct,
-  initialHomeValue = window.initialHomeValue,
-  furnishingValue = window.furnishingValue,
-  cashReserves = window.cashReserves;
+let initialOfferingValue = 'initialOfferingValue' in window ? window.initialOfferingValue : undefined,
+    annualAppreciation = 'annualAppreciation' in window ? window.annualAppreciation : undefined,
+    annualCashFlowPct = 'annualCashFlowPct' in window ? window.annualCashFlowPct : undefined,
+    initialInvestment = 'initialInvestment' in window ? window.initialInvestment : undefined,
+    holdingPeriod = 'holdingPeriod' in window ? window.holdingPeriod : undefined,
+    annualCashFlowIncrease = 'annualCashFlowIncrease' in window ? window.annualCashFlowIncrease : undefined,
+    dispositionExpensePct = 'dispositionExpensePct' in window ? window.dispositionExpensePct : undefined,
+    initialHomeValue = 'initialHomeValue' in window ? window.initialHomeValue : undefined,
+    furnishingValue = 'furnishingValue' in window ? window.furnishingValue : undefined,
+    cashReserves = 'cashReserves' in window ? window.cashReserves : undefined;
+
 
 // Auth state from local storage
 const userId = localStorage.getItem('ajs_user_id');
